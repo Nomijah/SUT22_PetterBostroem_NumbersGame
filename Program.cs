@@ -116,6 +116,8 @@ namespace NumbersGame2
                     }
                     triesAmount = userGuesses;
                 }
+                // Clear Console window before start
+                Console.Clear();
                 // Write the conditions of the game
                 Console.WriteLine("\n\tVälkommen! \n\n\tJag tänker på ett tal" +
                     $" mellan 1 och {maxNumber - 1}. " +
@@ -200,6 +202,8 @@ namespace NumbersGame2
                 }
                 if (playAgain.ToUpper() == "N")
                     play = false;
+                // Clear console window before reset or end
+                Console.Clear();
             }
 
             Console.WriteLine("\tTack för att du spelade!");
