@@ -193,7 +193,7 @@ namespace NumbersGame2
                 string playAgain = Console.ReadLine();
                 while (playAgain.ToUpper() != "J" && playAgain.ToUpper() != "N")
                 {
-                    Console.WriteLine("Felaktigt val, försök igen. J för ja" +
+                    Console.WriteLine("\tFelaktigt val, försök igen. J för ja" +
                         " eller N för nej.");
                     Console.Write("\t");
                     playAgain = Console.ReadLine();
