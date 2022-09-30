@@ -5,31 +5,6 @@ namespace NumbersGame2
 {
     internal class Program
     {
-        // Create function for checking if number is correct
-        public static int CheckGuess(int UserGuess, int RndNum)
-        {
-            // Return values for correct guess, too low and too high
-            int checkValue;
-            if (UserGuess == RndNum)
-                checkValue = 0;
-            else if (UserGuess < RndNum)
-            {
-                checkValue = 1;
-                // Check if guess was close to correct
-                if (UserGuess == RndNum - 1 || UserGuess == RndNum - 2 ||
-                    UserGuess == RndNum + 1 || UserGuess == RndNum + 2)
-                    checkValue = 11;
-            }
-            else
-            {
-                checkValue = 2;
-                // Check if guess was close to correct
-                if (UserGuess == RndNum - 1 || UserGuess == RndNum - 2 ||
-                    UserGuess == RndNum + 1 || UserGuess == RndNum + 2)
-                    checkValue = 21;
-            }
-            return checkValue;
-        }
         static void Main(string[] args)
         {
             // Create loop for restarting game
@@ -208,6 +183,31 @@ namespace NumbersGame2
 
             Console.WriteLine("\tTack för att du spelade!");
             Console.ReadKey();
+        }
+        // Create function for checking if number is correct
+        public static int CheckGuess(int UserGuess, int RndNum)
+        {
+            // Return values for correct guess, too low and too high
+            int checkValue;
+            if (UserGuess == RndNum)
+                checkValue = 0;
+            else if (UserGuess < RndNum)
+            {
+                checkValue = 1;
+                // Check if guess was close to correct
+                if (UserGuess == RndNum - 1 || UserGuess == RndNum - 2 ||
+                    UserGuess == RndNum + 1 || UserGuess == RndNum + 2)
+                    checkValue = 11;
+            }
+            else
+            {
+                checkValue = 2;
+                // Check if guess was close to correct
+                if (UserGuess == RndNum - 1 || UserGuess == RndNum - 2 ||
+                    UserGuess == RndNum + 1 || UserGuess == RndNum + 2)
+                    checkValue = 21;
+            }
+            return checkValue;
         }
     }
 }
